@@ -22,6 +22,15 @@ Configuration Variable | Default Value | Description
 `asset_data_debug_mode_enable` | false | Will output information about folders found and dump the contents of the `asset_base` and `assets` Twig variables as HTML comments.
 `asset_data_site_folder`| getcwd()     | This is the folder on your server where the site (and, presumably, the asset folders) is located. By default the plugin will determine this automatically, but the option exists in case it doesn't work properly or you have a setup where assets are stored elsewhere.
 
+Variables Available in Twig
+---------------------------
+Two variables are made available in Twig after running this plugin.
+
+Variable Name | Description
+--------------|------------
+`asset_base`  | Contains the URL of the folder used as the basis for the data contained in `assets`. This URL will be relative to the site base URL. For example, if your site is https://totallyawebsite.net/, this variable will contain everything after that.
+`assets`      | Contains an array with potentially several keys: `folders`, `files`, and `yamls`. See "Usage Example" for examples of the structure.
+
 Usage Example
 -------------
 Suppose your site's folder structure looks something like this (in addition to the other files you'd expect to exist):

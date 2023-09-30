@@ -10,11 +10,11 @@
  * Time: 11:00 PM
  * @author Trevor Key
  * @license MIT
- * @version 1.0
+ * @version 1.1
  */
 
 class AssetData extends AbstractPicoPlugin {
-    const API_VERSION = 2;
+    const API_VERSION = 3;
 
     // Config Data
     protected $base_url;
